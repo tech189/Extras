@@ -1,0 +1,25 @@
+{
+    "version": "2.16.8",
+    "description": "Scans for and deletes scam comments on your YouTube channel using several methods.",
+    "homepage": "https://github.com/ThioJoe/YT-Spammer-Purge",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ThioJoe/YT-Spammer-Purge/releases/download/v2.16.8/YTSpammerPurge.2.16.8.exe#/YTSpammerPurge.exe",
+            "hash": "5bff0a268af14cd375798007f1b1eb98d69fac1e72961da0fa296f9c59b6e32b"
+        }
+    },
+    "bin": "YTSpammerPurge.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ThioJoe/YT-Spammer-Purge/releases/download/v$version/YTSpammerPurge.$version.exe#/YTSpammerPurge.exe",
+                "hash": {
+                    "url": "https://github.com/ThioJoe/YT-Spammer-Purge/releases",
+                    "regex": "_$sha256.sha256"
+                }
+            }
+        }
+    }
+}

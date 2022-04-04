@@ -9,7 +9,13 @@
             "hash": "5bff0a268af14cd375798007f1b1eb98d69fac1e72961da0fa296f9c59b6e32b"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\client_secrets.json\")) {",
+        "   New-Item \"$dir\\client_secrets.json\" | Out-Null",
+        "}"
+    ],
     "bin": "YTSpammerPurge.exe",
+    "persist": "client_secrets.json",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
